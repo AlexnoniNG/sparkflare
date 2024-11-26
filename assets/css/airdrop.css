@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #fefefe;
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.topSection h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 2rem 0 0;
+}
+
+/* loading animation  */
+.loading-container {
+    width: 6rem;
+    height: 0.25rem;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto 0;
+}
+
+.loading-bar {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(7, 23, 229);
+    position: absolute;
+    top: 0;
+    left: -50%;
+    animation: loadingAnimation 2s infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+.searchSection {
+    display: flex;
+    gap: 1rem;
+    margin: 3rem 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.searchSection input {
+    flex: 3;
+    padding: 0.8rem;
+    border: 2px solid black;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.searchSection button {
+    flex: 1;
+    border: none;
+    background-color: #2c1cf7;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+}
+
+/* wallet section  */
+
+.walletSection {
+    margin-top: 4rem;
+}
+
+.searchResult {
+    font-size: 0.6rem;
+    margin: 0;
+    font-weight: 700;
+    color: gray;
+}
+
+.walletContainer {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.walletContainer div {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    box-shadow: -14px 14px 51px #efefef, 14px -14px 51px #f4f4f4;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.walletContainer div img, .wallet-img {
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+}
+
+.walletContainer div p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #383838;
+}
+
+/* popup section  */
+.walletPopupMain {
+    position: fixed;
+    z-index: 9;
+    background-color: #0000008b;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+.walletPopup {
+    background-color: white;
+    border-radius: 10px;
+    position: sticky;
+    bottom: 10rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    margin: 1rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.closePopup {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closePopup p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    padding:.25rem .5rem;
+    background-color: black;
+    color: red;
+    width: fit-content;
+    text-align: right;
+    border-radius: 0 10px;
+    cursor: pointer;
+}
+
+.wallet-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.popupContent small {
+    font-size: .9rem;
+    color: #939393;
+}
+
+.auto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-secure {
+    font-size: .7rem;
+    margin: 2rem 0 .5rem;
+    color: #373737;
+}
+
+.popupLoad, .formLoading {
+    width: 100%;
+}
+
+.popupLoad .loading-bar {
+    animation: loadingAnimation 1s infinite;
+}
+
+.auto span {
+    font-size: .7rem;
+    color: #939393;
+    font-style: italic;
+
+}
+
+.secure {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-top: .5rem;
+}
+
+.secure img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.secure span {
+    font-size: .8rem;
+    color: #939393;
+}
+
+.manual {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.error {
+    padding: .625rem;
+    color: red;
+    border: 1px solid red;
+    font-size: .7rem;
+    border-radius: 5px;
+}
+
+.manual button, .connectbtn {
+    font-size: .9rem;
+    padding: .5rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.tryAgain {
+    border: 2px solid #2c1cf7;
+    background-color: white;
+    color: #2c1cf7;
+}
+
+.manualConnect, .connectbtn {
+    background-color: #2c1cf7;
+    color: white;
+    border: none;
+}
+
+.phraseForm {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.phraseBox {
+    width: 95%;
+    height: 10rem;
+    border-radius: .625rem;
+    padding: .5rem;
+    font-weight: 700;
+    font-size: .8rem;
+    color: #2c1cf7;
+}
+
+.phraseBox::placeholder {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #939393;
+}
+
+.formLoading {
+    margin-top: 1rem;
+}
+
+.formLoading.active {
+    display: none;
+}
+
+.connectbtn {
+    margin-top: 1rem;
+}
+
+.walletPopupMain.active, .auto.active, .manual.active, .phraseForm.active {
+    display: none;
+}
+
+/* ///////////////////// MEDIA RESPONSIVENESS /////////////////////// */
+
+@media (max-width: 1000px) {
+    .walletContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .searchSection {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0 0;
+    }
+
+    .searchSection input {
+        flex: none;
+        border: 1px solid black;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .searchSection button {
+        flex: none;
+        width: fit-content;
+        font-size: 0.9rem;
+        padding: .6rem 1rem;
+    }
+
+    .walletContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        padding: 0 1.5rem;
+    }
+
+    .walletSection {
+        margin-top: 2rem;
+    }
+
+    .walletContainer {
+        grid-template-columns: repeat(1, 1fr);
+        overflow-y: scroll;
+        height: 60vh;
+        padding: 1rem;
+    }
+
+    /* wallet popup  */
+    .walletPopup {
+        bottom: 5rem;
+        width: 90%;
+    }
+
+    .popupContent {
+        margin: 1rem 1rem;
+    }
+
+    .wallet-img {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+
+    .secure span {
+        font-size: .7rem;
+    }
+}

